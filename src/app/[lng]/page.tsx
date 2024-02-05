@@ -12,10 +12,10 @@ export default async function Home({
 
   return (
     <>
-      <Banner />
-      <Message />
-      <AboutUs />
-      <OurValues />
+      <Banner lng={lng}/>
+      <Message lng={lng}/>
+      <AboutUs lng={lng}/>
+      <OurValues lng={lng}/>
     </>
   );
 }

@@ -1,10 +1,15 @@
-export const Message = () => {
+import { getTranslation } from "@/i18n";
+
+export const Message = async ({ lng }: { lng: string }) => {
+
+  const { t } = await getTranslation(lng, "home");
+
   return (
     <article className="bg-others text-white text-center mt-10 py-2 text-2xl">
-      <h1>"In a country over 3.000 Freight Forwardng companies,</h1>
+      <h1>"{t('messageTitle1')}</h1>
       <h1>
-        Global Warehouse Center stands out as a beacon of unparalleled
-        <span className="font-bold"> expertise and commitment</span>"
+      {t('messageTitle2')}
+        <span className="font-bold"> {t('messageTitle3')}</span>"
       </h1>
     </article>
   );

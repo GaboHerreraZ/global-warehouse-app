@@ -1,7 +1,7 @@
 import { getTranslation } from "@/i18n";
 
 export const Banner = async ({lng}: {lng:string}) => {
-  const { t } = await getTranslation(lng, "home");
+  const { t } = await getTranslation(lng, "whatWeDo");
 
   return (
     <section className="px-40">
