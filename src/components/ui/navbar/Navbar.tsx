@@ -8,16 +8,13 @@ export const Navbar = async ({ lng }: { lng: string }) => {
     <nav className="bg-main text-white">
       <ul className="flex gap-10 px-32 py-2 text-sm font-bold">
         <li>
-          <Link href="/">{t("home")}</Link>
+          <Link href={`/${lng}`}>{t("home")}</Link>
         </li>
         <li>
-          <Link href="/about-us">{t("about")}</Link>
+          <Link href={`/${lng}/what-we-do`}>{t("whatWeDo")}</Link>
         </li>
         <li>
-          <Link href="/what-we-do">{t('whatWeDo')}</Link>
-        </li>
-        <li>
-          <Link href="/contact">{t('contact')}</Link>
+          <Link href={`/${lng}/contact`}>{t("contact")}</Link>
         </li>
       </ul>
     </nav>

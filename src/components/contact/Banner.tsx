@@ -5,20 +5,20 @@ import phone from "../../../public/svg/phone.svg";
 import { getTranslation } from "@/i18n";
 
 export const Banner = async ({ lng }: { lng: string }) => {
-  const {t} = await getTranslation(lng, "contact");
+  const { t } = await getTranslation(lng, "contact");
   return (
-    <section className="px-40">
+    <section className="px-5 md:px-20">
       <div className="flex mt-10 px-10  bg-main ">
-        <h1 className="text-white text-6xl py-10 px-20 font-bold">
-          {t('contactTitle1')} <br />
-          {t('contactTitle2')} <br />
-          {t('contactTitle3')}
+        <h1 className="text-white text-3xl   md:text-5xl py-10 px-2 md:px-20 font-bold">
+          {t("contactTitle1")} <br />
+          {t("contactTitle2")} <br />
+          {t("contactTitle3")}
         </h1>
       </div>
 
-      <div className="flex justify-between mt-10">
-        <div className="flex justify-center items-center">
-          <div className="bg-secondary rounded-full h-12 w-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-start  md:justify-between mt-10">
+        <div className="flex flex-col md:flex-row  md:justify-center items-center ">
+          <div className="bg-secondary rounded-full h-12 w-12 mb-2 md:mb-0">
             <Image src={location} alt="Location global warehouse" />
           </div>
           <label className="text-others ml-4 font-bold">
@@ -26,8 +26,8 @@ export const Banner = async ({ lng }: { lng: string }) => {
           </label>
         </div>
 
-        <div className="flex justify-center items-center">
-          <div className="bg-secondary rounded-full h-12 w-12 flex justify-center">
+        <div className="flex flex-col md:flex-row  md:justify-center items-center mt-5 md:mt-0">
+          <div className="bg-secondary rounded-full h-12 w-12 mb-2 md:mb-0 flex justify-center">
             <Image src={mail} alt="Location global warehouse" />
           </div>
           <label className="text-others ml-4 font-bold">
@@ -35,8 +35,8 @@ export const Banner = async ({ lng }: { lng: string }) => {
           </label>
         </div>
 
-        <div className="flex justify-center items-center">
-          <div className="bg-secondary rounded-full h-12 w-12 flex justify-center">
+        <div className="flex flex-col md:flex-row  md:justify-center items-center mt-5 md:mt-0">
+          <div className="bg-secondary rounded-full h-12 w-12 mb-2 md:mb-0 flex justify-center">
             <Image src={phone} alt="Location global warehouse" />
           </div>
           <label className="text-others ml-4 font-bold">+1-786-658-1314</label>

@@ -45,14 +45,12 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }>) {
-  console.log("lng", lng);
-
   return (
     <html lang={lng}>
       <body className={inter.className}>
         <Navbar lng={lng} />
         {children}
-        <Footer lng={lng}/>
+        <Footer lng={lng} />
       </body>
     </html>
   );
