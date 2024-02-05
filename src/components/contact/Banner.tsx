@@ -2,15 +2,17 @@ import Image from "next/image";
 import location from "../../../public/svg/location.svg";
 import mail from "../../../public/svg/mail.svg";
 import phone from "../../../public/svg/phone.svg";
+import { getTranslation } from "@/i18n";
 
-export const Banner = () => {
+export const Banner = async ({ lng }: { lng: string }) => {
+  const {t} = await getTranslation(lng, "contact");
   return (
     <section className="px-40">
       <div className="flex mt-10 px-10  bg-main ">
         <h1 className="text-white text-6xl py-10 px-20 font-bold">
-          Actively listening <br />
-          to our customers needs <br />
-          and experiences
+          {t('contactTitle1')} <br />
+          {t('contactTitle2')} <br />
+          {t('contactTitle3')}
         </h1>
       </div>
 
