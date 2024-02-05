@@ -40,13 +40,17 @@ export async function generateStaticParams() {
 
 export default function RootLayout({
   children,
+  params: { lng },
 }: Readonly<{
   children: React.ReactNode;
+  params: { lng: string };
 }>) {
+  console.log("lng", lng);
+
   return (
-    <html lang="en">
+    <html lang={lng}>
       <body className={inter.className}>
-        <Navbar />
+        <Navbar lng={lng} />
         {children}
         <Footer />
       </body>
