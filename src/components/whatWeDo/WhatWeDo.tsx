@@ -1,78 +1,70 @@
-export const WhatWeDo = () => {
+import { getTranslation } from "@/i18n";
+
+export const WhatWeDo = async ({ lng }: { lng: string }) => {
+  const { t } = await getTranslation(lng, "whatWeDo");
+
   return (
     <>
       <div className="grid md:grid-cols-2">
         <section className="grid gap-20 px-40 mt-10">
           <article className="">
-            <h1 className="text-3xl text-main font-bold">
-              At the Warehouse - Air Shipping
-            </h1>
+            <h1 className="text-3xl text-main font-bold">{t("airShipment")}</h1>
             <p className="text-default text-justify my-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ad,
-              exercitationem unde odit nisi ratione! Porro, suscipit ipsa
-              deserunt quidem molestiae rem omnis! Blanditiis suscipit maxime
-              ipsa optio at sint.
+              {t("airShipmentParagraph")}
             </p>
             <ul className="list-disc px-5">
-              <li>
-                Receiving your parcels from major carriers or walk in customers
-              </li>
-              <li>Inspecting shipment</li>
-              <li>Weight</li>
-              <li>Dimensions (if required)</li>
-              <li>Descriptions of goods </li>
-              <li>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-                neque aut eos ex? Doloremque veritatis mollitia possimus eveniet
-                velit recusandae perspiciatis sapiente dolorem odio vel.
-                Provident enim corporis maxime autem!
-              </li>
-              <li>Descriptions of goods </li>
-              <li>Descriptions of goods </li>
-              <li>Descriptions of goods </li>
+              <li>{t("airShipmentList1")}</li>
+              <li>{t("airShipmentList2")}</li>
+              <li>{t("airShipmentList3")}</li>
+              <li>{t("airShipmentList4")}</li>
+              <li>{t("airShipmentList5")}</li>
+              <li>{t("airShipmentList6")}</li>
+              <li>{t("airShipmentList7")}</li>
+              <li>{t("airShipmentList8")}</li>
+              <li>{t("airShipmentList9")}</li>
             </ul>
           </article>
 
           <article className="">
             <h1 className="text-3xl text-main font-bold">
-              Additional services
+              {t('additionalServices')}
             </h1>
             <ul className="list-disc px-5 mt-5">
-              <li>Inspecting shipment</li>
-              <li>Inspecting shipment</li>
-              <li>Weight</li>
-              <li>Dimensions (if required)</li>
-              <li>Descriptions of goods </li>
-              <li>Descriptions of goods </li>
-              <li>Descriptions of goods </li>
-              <li>Descriptions of goods </li>
+              <li>{t('additionalServicesList1')}</li>
+              <li>{t('additionalServicesList2')}</li>
+              <li>{t('additionalServicesList3')}</li>
+              <li>{t('additionalServicesList4')}</li>
+              <li>{t('additionalServicesList5')}</li>
+              <li>{t('additionalServicesList6')}</li>
+              <li>{t('additionalServicesList7')}</li>
+              <li>{t('additionalServicesList8')}</li>
+              <li>{t('additionalServicesList9')}</li>
+              <li>{t('additionalServicesList10')}</li>
+              <li>{t('additionalServicesList11')}</li>
             </ul>
           </article>
         </section>
         <section className="grid gap-20 px-40 mt-10">
           <article>
             <h1 className="text-main text-3xl font-bold">
-              Airport to airport services (ATA) by cargo airlines (3 options)
+              {t('airport')}
             </h1>
             <div className="mt-5">
-              <h1>Option #1</h1>
+              <h1>{t('airportOption1')}</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, amet soluta aut error, blanditiis minima est{" "}
+                {t('airportOption1Paragraph')}
               </p>
             </div>
             <div className="mt-5">
-              <h1>Option #2</h1>
+              <h1>{t('airportOption2')}</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, amet soluta aut error, blanditiis minima est{" "}
+              {t('airportOption2Paragraph')}
               </p>
             </div>
             <div className="mt-5">
-              <h1>Option #3</h1>
+              <h1>{t('airportOption3')}</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam, amet soluta aut error, blanditiis minima est{" "}
+              {t('airportOption3Paragraph')}
               </p>
             </div>
           </article>
@@ -80,13 +72,10 @@ export const WhatWeDo = () => {
       </div>
       <div className="px-40 mt-10">
         <h1 className="text-secondary text-4xl font-bold">
-          No Sales Tax Online - Only with Global Warehouse Center!
+          {t('globalWarehouseCenter')}
         </h1>
         <p className="my-5 text-default">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis
-          veritatis soluta recusandae ab eos vitae, nostrum nam accusamus eius,
-          quod earum, quae sequi optio ratione. Laborum dicta laboriosam
-          pariatur quibusdam?
+          {t('globalWarehouseCenterParagraph')}
         </p>
       </div>
     </>

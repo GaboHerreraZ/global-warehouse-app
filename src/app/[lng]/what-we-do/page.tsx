@@ -1,10 +1,10 @@
 import { BannerWhatWeDo, WhatWeDo } from "@/components";
 
-export default function WhatWeDoPage() {
+  export default function WhatWeDoPage({params:{lng}}: {params: {lng: string}}) {
   return (
     <>
-      <BannerWhatWeDo />
-      <WhatWeDo />
+      <BannerWhatWeDo lng={lng}/>
+      <WhatWeDo lng={lng}/>
     </>
   );
 }
