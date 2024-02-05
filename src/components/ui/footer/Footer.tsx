@@ -1,20 +1,23 @@
+import { getTranslation } from "@/i18n";
 import Link from "next/link";
 
-export const Footer = () => {
+export const Footer = async ({ lng }: { lng: string }) => {
+  const { t } = await getTranslation(lng, "navbar");
+
   return (
     <footer className="flex gap-20 justify-evenly font-bold text-default bg-background  text-xl p-10">
       <ul className=" ">
         <li className=" pb-5">
-          <Link href="/">Home</Link>
+          <Link href="/">{t("home")}</Link>
         </li>
         <li className="font-bold py-5">
-          <Link href="/about-us">About Us</Link>
+          <Link href="/about-us">{t("about")}</Link>
         </li>
         <li className="font-bold py-5">
-          <Link href="/what-we-do">What we do</Link>
+          <Link href="/what-we-do">{t('whatWeDo')}</Link>
         </li>
         <li className="font-bold py-5">
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">{t('contact')}</Link>
         </li>
       </ul>
       <div>

@@ -14,10 +14,10 @@ export const Navbar = async ({ lng }: { lng: string }) => {
           <Link href="/about-us">{t("about")}</Link>
         </li>
         <li>
-          <Link href="/what-we-do">WHAT WE DO</Link>
+          <Link href="/what-we-do">{t('whatWeDo')}</Link>
         </li>
         <li>
-          <Link href="/contact">CONTACT</Link>
+          <Link href="/contact">{t('contact')}</Link>
         </li>
       </ul>
     </nav>
