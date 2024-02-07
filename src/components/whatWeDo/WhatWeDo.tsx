@@ -1,11 +1,14 @@
 import { getTranslation } from "@/i18n";
+import Image from "next/image";
+
+import airplane from "../../../public/png/airplane.png";
 
 export const WhatWeDo = async ({ lng }: { lng: string }) => {
   const { t } = await getTranslation(lng, "whatWeDo");
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         <section className="grid gap-20 px-5 md:px-20 mt-10">
           <article className="">
             <h1 className="text-3xl text-main font-bold">{t("airShipment")}</h1>
@@ -43,9 +46,20 @@ export const WhatWeDo = async ({ lng }: { lng: string }) => {
               <li>{t("additionalServicesList11")}</li>
             </ul>
           </article>
-        </section>
-        <section className="grid gap-20 px-5 md:px-20 mt-10">
           <article>
+            <h1 className="text-3xl text-main font-bold">
+              {t("maritimeService")}
+            </h1>
+            <ul className="list-disc px-5 mt-5">
+              <li>{t("maritimeServiceList1")}</li>
+              <li>{t("maritimeServiceList2")}</li>
+              <li>{t("maritimeServiceList3")}</li>
+              <li>{t("maritimeServiceList4")}</li>
+            </ul>
+          </article>
+        </section>
+        <section className="flex flex-col  px-5 md:px-20 mt-10">
+          <article className="h-1/2">
             <h1 className="text-main text-3xl font-bold">{t("airport")}</h1>
             <div className="mt-5">
               <h1>{t("airportOption1")}</h1>
@@ -60,6 +74,14 @@ export const WhatWeDo = async ({ lng }: { lng: string }) => {
               <p>{t("airportOption3Paragraph")}</p>
             </div>
           </article>
+          <div className=" h-1/2 md:h-[700px]  w-full">
+            <Image
+              src={airplane}
+              alt="what we do image"
+              width={700}
+              height={500}
+            />
+          </div>
         </section>
       </div>
       <div className="px-5 md:px-20 mt-10">

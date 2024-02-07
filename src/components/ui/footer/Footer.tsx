@@ -5,7 +5,7 @@ export const Footer = async ({ lng }: { lng: string }) => {
   const { t } = await getTranslation(lng, "navbar");
 
   return (
-    <footer className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-20 justify-evenly font-bold text-default bg-background text-lg  md:text-xl p-5 md:p-20">
+    <footer className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-20 justify-evenly font-bold text-default bg-background text-lg  md:text-xl p-5 md:p-20">
       <ul className=" ">
         <li className=" pb-5">
           <Link href={`/${lng}`}>{t("home")}</Link>

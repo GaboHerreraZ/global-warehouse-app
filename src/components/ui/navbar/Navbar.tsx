@@ -6,7 +6,7 @@ export const Navbar = async ({ lng }: { lng: string }) => {
 
   return (
     <nav className="bg-main text-white">
-      <ul className="flex gap-10 px-32 py-2 text-sm font-bold">
+      <ul className="flex flex-col md:flex-row items-center gap-2 md:gap-10 px-32 py-2 text-sm font-bold">
         <li>
           <Link href={`/${lng}`}>{t("home")}</Link>
         </li>

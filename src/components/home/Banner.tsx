@@ -1,13 +1,16 @@
 import { getTranslation } from "@/i18n";
+import Image from "next/image";
 import Link from "next/link";
+
+import home from "../../../public/png/home.png";
 
 export const Banner = async ({ lng }: { lng: string }) => {
   const { t } = await getTranslation(lng, "home");
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2   bg-background py-20 px-2 md:px-32">
-      <div className="w-full">
-        <div className="bg-white w-full px-10 py-2 text-3xl md:text-4xl rounded-tr-[35px] rounded-tl-[35px] rounded-bl-[35px] md:w-[70%]">
+    <section className="grid grid-cols-1 md:grid-cols-2 bg-background md:py-10 lg:py-10 px-2 md:px-12 lg:px-24">
+      <div className="w-full mt-2 md:mt-0">
+        <div className="bg-white px-10 py-2 text-3xl md:text-4xl rounded-tr-[35px] rounded-tl-[35px] rounded-bl-[35px] w-full  lg:w-[70%]">
           <h1 className="text-others">{t("bannerTitle1")}</h1>
           <h1 className="text-secondary text-end">{t("bannerTitle2")}</h1>
         </div>
@@ -24,7 +27,15 @@ export const Banner = async ({ lng }: { lng: string }) => {
           {t("bannerLink")}
         </Link>
       </div>
-      <div className="w-1/2"></div>
+      <div className="p-4 md:mt-0 w-full flex justify-center">
+        <Image
+          className=""
+          src={home}
+          alt="home image"
+          width={450}
+          height={450}
+        />
+      </div>
     </section>
   );
 };
