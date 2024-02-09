@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "gotham";
+  src: url("/font/GothamNarrowBold.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "acumin";
+  src: url("/font/AcuminConcept.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myriad";
+  src: url("/font/MyriadRegular.otf") format("opentype");
+  font-style: normal;
+}

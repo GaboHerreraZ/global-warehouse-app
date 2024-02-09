@@ -8,7 +8,7 @@ export const WhatWeDo = async ({ lng }: { lng: string }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 font-acumin">
         <section className="grid gap-20 px-5 md:px-20 mt-10">
           <article className="">
             <h1 className="text-3xl text-main font-bold">{t("airShipment")}</h1>
@@ -59,7 +59,7 @@ export const WhatWeDo = async ({ lng }: { lng: string }) => {
           </article>
         </section>
         <section className="flex flex-col  px-5 md:px-20 mt-10">
-          <article className="h-1/2">
+          <article className="">
             <h1 className="text-main text-3xl font-bold">{t("airport")}</h1>
             <div className="mt-5">
               <h1>{t("airportOption1")}</h1>
@@ -74,21 +74,31 @@ export const WhatWeDo = async ({ lng }: { lng: string }) => {
               <p>{t("airportOption3Paragraph")}</p>
             </div>
           </article>
-          <div className=" h-1/2 md:h-[700px]  w-full">
-            <Image
+          <div className="relative  h-[350px] md:h-full  w-full">
+            {/* <Image
               src={airplane}
               alt="what we do image"
               width={700}
               height={500}
+            /> */}
+            <Image
+              src={airplane}
+              alt="Package"
+              className=" py-20"
+              fill
+              sizes="(min-width: 808px) 50vw, 100vw"
+              style={{
+                objectFit: "cover",
+              }}
             />
           </div>
         </section>
       </div>
-      <div className="px-5 md:px-20 mt-10">
-        <h1 className="text-secondary text-4xl font-bold">
+      <div className="px-5 md:px-20 mt-10 font-acumin">
+        <h1 className="text-secondary text-3xl font-bold">
           {t("globalWarehouseCenter")}
         </h1>
-        <p className="my-5 text-default text-justify">
+        <p className="my-5  text-justify">
           {t("globalWarehouseCenterParagraph")}
         </p>
       </div>

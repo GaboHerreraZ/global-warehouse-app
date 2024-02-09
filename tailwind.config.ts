@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "home-title": "61pt",
+        "home-text": "24pt",
+        "home-franjas": "40pt",
+      },
+      fontFamily: {
+        gotham: "gotham",
+        acumin: "acumin",
+        myriad: "myriad",
+      },
       colors: {
         main: "#fcb904",
         secondary: "#fb0695",
