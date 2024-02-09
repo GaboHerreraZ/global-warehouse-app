@@ -75,12 +75,6 @@ export const WhatWeDo = async ({ lng }: { lng: string }) => {
             </div>
           </article>
           <div className="relative  h-[350px] md:h-full  w-full">
-            {/* <Image
-              src={airplane}
-              alt="what we do image"
-              width={700}
-              height={500}
-            /> */}
             <Image
               src={airplane}
               alt="Package"
