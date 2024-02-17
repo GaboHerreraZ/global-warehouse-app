@@ -1,6 +1,8 @@
 // import { Inter } from "next/font/google";
+import { getTranslation } from "@/i18n";
 import "./globals.css";
 import { Footer, Navbar } from "@/components";
+import { Metadata } from "next";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -8,9 +10,7 @@ const languages = ["en", "es"];
 
 //PENDIENTE SEO
 
-/**
- * 
- * export async function generateMetadata({
+export async function generateMetadata({
   params: { lng },
 }: {
   params: { lng: string };
@@ -18,21 +18,19 @@ const languages = ["en", "es"];
   const { t } = await getTranslation(lng, "seo");
 
   return {
-    metadataBase: new URL("https://www.dominicanmasterblue.com"),
+    metadataBase: new URL("https://www.globalwarehousecenter.com"),
     title: {
-      default: "Dominican MasterBlue",
-      template: "%s | Dominican MasterBlue",
+      default: "Global Warehouse Center",
+      template: "%s | Global Warehouse Center",
     },
     description: t("description"),
     verification: {
       google:
-        "google-site-verification=I7msbVupafxpHYu74C85WNUgR0m3oRR8SsK1hfsejqc",
+        "",
     },
   };
 }
- * 
- * 
- */
+ 
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));

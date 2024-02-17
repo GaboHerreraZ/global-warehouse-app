@@ -4,9 +4,14 @@
   "contactTitle3": "and experiences",
 
   "companyName": "Company Name:",
+  "errorCompanyName": "Please add company name",
   "contactPerson": "Contact person:",
+  "errorContactPerson": "Please add a name",
   "email": "Email Address:",
+  "errorEmail": "Please add a valid email address",
   "phoneNumber": "Phone number (including country code):",
+  "errorPhoneNumber": "Please add a phone number",
   "message": "Message:",
+  "errorMessage": "Please add a message",
   "contactUs": "Contact Us"
 }

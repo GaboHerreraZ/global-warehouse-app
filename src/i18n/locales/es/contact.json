@@ -4,9 +4,14 @@
   "contactTitle3": "clientes y sus experiencias",
 
   "companyName": "Nombre de empresa:",
+  "errorCompanyName": "Por favor, agrega el nombre de la empresa",
   "contactPerson": "Nombre de contacto:",
+  "errorContactPerson": "Por favor, agrega un nombre",
   "email": "Email:",
+  "errorEmail": "Por favor, agrega un email válido",
   "phoneNumber": "Numero de teléfono (incluyendo código de país):",
+  "errorPhoneNumber": "Por favor, agrega un número de teléfono",
   "message": "Mensaje:",
+  "errorMessage": "Por favor, agrega un mensaje",
   "contactUs": "Contáctanos"
 }
