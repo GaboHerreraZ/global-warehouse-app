@@ -9,10 +9,10 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const email: Email = {
-      from: "Dominican MasterBlue <info-no-reply@dominicanmasterblue.com>",
-      to: ["dominicanmasterblue@gmail.com", body.email],
-      subject: "Solicitud de información",
-      html: EmailTemplate(body),  
+      from: "Global Warehouse Center <info-no-reply@globalwarehousecenter.com>",
+      to: ["gaboghz654@gmail.com"],
+      subject: "Información de contact",
+      html: EmailTemplate(body),
     };
 
     const response = await resend.emails.send(email);
