@@ -25,12 +25,10 @@ export async function generateMetadata({
     },
     description: t("description"),
     verification: {
-      google:
-        "",
+      google: "",
     },
   };
 }
- 
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -46,9 +44,10 @@ export default function RootLayout({
   return (
     <html lang={lng}>
       <body>
-        <Navbar lng={lng} />
-        {children}
-        <Footer lng={lng} />
+        {/* <Navbar lng={lng} /> */}
+        {/* {children} */}
+        <></>
+        {/* <Footer lng={lng} /> */}
       </body>
     </html>
   );
