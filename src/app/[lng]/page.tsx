@@ -7,10 +7,10 @@ export default async function Home({
 }) {
   return (
     <>
-      <Banner lng={lng} />
-      <Message lng={lng} />
-      <AboutUs lng={lng} />
-      <OurValues lng={lng} />
+      {/* <Banner lng={lng} /> */}
+      {/* <Message lng={lng} /> */}
+      {/* <AboutUs lng={lng} /> */}
+      {/* <OurValues lng={lng} /> */}
     </>
   );
 }
